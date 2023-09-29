@@ -1,0 +1,53 @@
+Using REGEX commands to search in databases starting with or ending with some letters
+
+
+
+We can use mongo command through NODEJS
+ie
+
+gitbash-> node 
+ .load movie.js
+"and then whole movie .js" will load and can use command through Model NAME
+
+ie
+ModelNAME=Movie
+
+CREATE COMMAND
+
+Movie.create({name:'star wars',year:2222,rating:5,iswatched:false}).then((m)=>console.log(m)) // models return query or promise
+
+INSERT COMMAND
+
+Movie.insertMany({name:'star wars',year:2222,rating:5,iswatched:false},{name:'star wars',year:2222,rating:5,iswatched:false},{name:'star wars',year:2222,rating:5,iswatched:false}).then((m)=>console.log(m)) // models return query or promise
+
+FIND  COMMAND
+
+Movie.findOne({name:'spiderman'}).then((m)=>console.log(m))
+
+Movie.find({rating:{$gte:9}}).then((m)=>console.log(m))
+
+Movie.findById({'g123uvg124'}).then((m)=>console.log(m))
+
+UPDATE COMMAND
+
+Movie.updateOne({name:'spiderman'},{rating:8}).then((m)=>console.log(m))
+
+Movie.deleteOne({name:'spiderman'}).then((m)=>console.log(m))
+
+LOGCIAL OPERATOR COMMAND
+
+Movie.find({$and:[{year:{$gte:2000}},{year:{$lte:2020}}]}).then((m)=>{console.log(m)})
+
+COUNTING COMMAND
+
+Movie.find({}).count().then((m)=>{console.log(m)}) //may work or not
+
+Movie.countDocuments({$and:[{year:{$gte:2000}},{year:{$lte:2020}}]}).then((m)=>{console.log(m)})
+
+FIND BY ID AND UPDATE
+
+Movie.findByIdAndUpdate('safq332rg3',{rating:7}).then(m=>console.log(m))
+
+FIND BY ID AND DELETE 
+
+Movie.findByIdAndDelete('safq332rg3').then(m=>console.log(m))

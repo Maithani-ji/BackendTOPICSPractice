@@ -1,0 +1,9 @@
+<%- include('./partials/header')    %>
+    <h2> Magic no = <%= Math.floor(Math.random()*10+1)  %> </h2>
+
+    <% if( Math.floor(Math.random()*10+1)%2===0) { %>
+        <h3>number even</h3>
+        <% } else { %>
+        <h4>no is odd</h4>
+        <% }%>
+        <%- include("./partials/footer") %>

@@ -1,0 +1,57 @@
+we can create things and add things in data base using nodejs 
+but to view changes we have to use 'MONGOSH' ie mongoshell  in d drive
+which uses commands
+
+showing databases->
+show db / show databases
+using database->
+use dbname
+creating collection in database->
+db.createCollection('movies or collection name')
+showing collections in dbname->
+show collections (collection means documents in which data is stored and can be many types of collections)
+dropping a database->
+db.dropDatabase()
+
+
+for example ->
+using a database--
+
+show db
+use movieDB
+show collection
+o/p->movies
+
+inserting data in collection->
+
+db.movies.insertOne({nam:'',year: ,rating: })
+
+showing all data in a collection->
+
+db.movies.find({}).pretty()
+
+inserting many data at once->
+
+db.movies.insertMany([{},{},{},{}])
+
+updating a collection data->
+
+db.movies.updateOne({name:___},{$set:{rating:2018}})
+db.movies.updateMany({name:___},{$set:{rating:2018}})
+
+deleting a collection data->
+
+db.movies.deleteOne({name:___})
+db.movies.updateMany({name:___})
+
+using query logical operator->
+
+db.movies.find({rating:{$eq:8}})
+
+db.movies.find({rating:{$gt:8}})
+
+db.movies.find({rating:{$eq:8}}).count()
+
+eq,gt,in,lt,gte,lte more can find in mongodb resources/ operator/ comparisons /logical /aggregate operations
+
+db.movies.find({$and:[{year:{$gte:2016}},{year:{$lte:2020}}]})

@@ -1,0 +1,8 @@
+<%- include('./partials/header')    %>
+    <h6>THE todo list</h6>
+
+    <ul>
+        <% for(const todo of todos){%>
+       <li> <%= todo %> </li>
+<%}%>    </ul>
+<%- include("./partials/footer") %>

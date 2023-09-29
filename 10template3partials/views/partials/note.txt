@@ -1,0 +1,5 @@
+partials file should be of ejs
+and
+partials should be inside views folder
+
+it uses ' <%- includes("./partials/header or footer") '%>

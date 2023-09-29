@@ -1,0 +1,1 @@
+public folder contains all the html css images and videos resources and can be included like linking css

@@ -1,0 +1,14 @@
+<%- include('./partials/header')  %>
+<%- include('./partials/navbar')  %>
+
+
+<ul class="list-group">
+    <% for(const to of todo){%>
+    <li class="list-group-item mx-auto w-25"> <strong>
+        <%=todo%>
+    </strong></li>
+    <%}%>
+    
+  </ul>
+
+<%- include('./partials/footer')%>
